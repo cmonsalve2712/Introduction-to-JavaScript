@@ -18,7 +18,12 @@ Do the following:
    HINT: no function required
 */
 
-
+var votingAge = 9
+if(votingAge >= 18){
+  console.log(true);
+} else{
+  console.log(false);
+}
 
 /*
 Task 1b - Values
@@ -31,6 +36,15 @@ Do the following:
    HINT: no function required
 */
 
+var value1 = 3
+var value2 = 9
+
+
+
+if(value2 > value1){
+    value2 = value1;
+    console.log(value1)
+}
 
 
 
@@ -45,6 +59,12 @@ Do the following:
 
    HINT: look up the Number method
 */
+function convertStringNumber(){
+  var string1 = "1999"
+  string1 = Number(string1);
+  return string1;  
+}
+convertStringNumber();
 
 
 
@@ -58,9 +78,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(num1, num2){
+  return num1*num2;
+}
 
 
 
@@ -74,8 +94,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(yourAge){
+  return yourAge*7
 }
 
 
@@ -107,8 +127,30 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(dogWeight, dogAge){
+  if(dogAge>=1){
+    if(dogWeight <= 5){
+      return dogWeight*.05;
+    }
+    if(dogWeight <= 10){
+      return dogWeight*.04;
+    }
+    if(dogWeight <= 15){
+      return dogWeight*.03;
+    }
+    if(dogWeight > 15){
+      return dogWeight*.02;
+    }
+  }
+  if(dogAge >= .584){
+    return dogWeight*.04;
+  }
+  if(dogAge >= .334){
+    return dogWeight*.05;
+  }
+  if(dogAge >= .166){
+    return dogWeight*.1;
+  }
   }
 
 
@@ -149,10 +191,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
+function miles(usrKilometers){
+  return usrKilometers * 0.621371;
+}
 
 
 //Task 5b - Feet to CM
@@ -163,9 +204,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(userCentimeters){
+  return userCentimeters / 30.48;
+}
+
  
 
 
